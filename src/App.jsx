@@ -1,11 +1,11 @@
-import React from 'react'
-import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom'
-import HomePage from './pages/HomePage'
-import MainLayout from './layouts/MainLayout'
-import JobsPage from './pages/JobsPAge'
-import NotFoundPage from './pages/NotFoundPage'
-import JobPage, { jobLoader }  from './pages/JobPAge'
-import AddJobPage from './pages/AddJobPage'
+import React from 'react';
+import { Route, createBrowserRouter, createRoutesFromElements, RouterProvider } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import MainLayout from './layouts/MainLayout';
+import JobsPage from './pages/JobsPAge';
+import NotFoundPage from './pages/NotFoundPage';
+import JobPage, { jobLoader }  from './pages/JobPAge';
+import AddJobPage from './pages/AddJobPage';
 
 const App = () => {
   const addJob = async (newJob) => {
@@ -24,6 +24,7 @@ const App = () => {
     const res = await fetch(`/api/jobs/${jobId}`,{
       method : 'DELETE'
     });
+
     return;
   }
   
